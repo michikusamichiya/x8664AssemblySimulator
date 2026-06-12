@@ -4,6 +4,126 @@
 
     </head>
     <body>
-        
+        <div class="container">
+            <div class="left">
+                <textarea id="editor" placeholder="ここにアセンブリやメモを書いてください"></textarea>
+            </div>
+            <div class="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>x86_64におけるレジスタ</th>
+                            <th>値</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="group"><td colspan="2">汎用レジスタ</td></tr>
+                        <tr><td>RAX</td><td id="rax"></td></tr>
+                        <tr><td>RBX</td><td id="rbx"></td></tr>
+                        <tr><td>RCX</td><td id="rcx"></td></tr>
+                        <tr><td>RDX</td><td id="rdx"></td></tr>
+                        <tr><td>RSI</td><td id="rsi"></td></tr>
+                        <tr><td>RDI</td><td id="rdi"></td></tr>
+                        <tr><td>RBP</td><td id="rbp"></td></tr>
+                        <tr><td>RSP</td><td id="rsp"></td></tr>
+                        <tr><td>R8</td><td id="r8"></td></tr>
+                        <tr><td>R9</td><td id="r9"></td></tr>
+                        <tr><td>R10</td><td id="r10"></td></tr>
+                        <tr><td>R11</td><td id="r11"></td></tr>
+                        <tr><td>R12</td><td id="r12"></td></tr>
+                        <tr><td>R13</td><td id="r13"></td></tr>
+                        <tr><td>R14</td><td id="r14"></td></tr>
+                        <tr><td>R15</td><td id="r15"></td></tr>
+
+                        <tr class="group"><td colspan="2">ポインタ / 命令ポインタ</td></tr>
+                        <tr><td>RIP</td><td id="rip"></td></tr>
+
+                        <tr class="group"><td colspan="2">セグメントレジスタ</td></tr>
+                        <tr><td>CS</td><td id="cs"></td></tr>
+                        <tr><td>DS</td><td id="ds"></td></tr>
+                        <tr><td>ES</td><td id="es"></td></tr>
+                        <tr><td>FS</td><td id="fs"></td></tr>
+                        <tr><td>GS</td><td id="gs"></td></tr>
+                        <tr><td>SS</td><td id="ss"></td></tr>
+
+                        <tr class="group"><td colspan="2">フラグ</td></tr>
+                        <tr><td>RFLAGS</td><td id="rflags"></td></tr>
+
+                        <tr class="group"><td colspan="2">制御レジスタ</td></tr>
+                        <tr><td>CR0</td><td id="cr0"></td></tr>
+                        <tr><td>CR2</td><td id="cr2"></td></tr>
+                        <tr><td>CR3</td><td id="cr3"></td></tr>
+                        <tr><td>CR4</td><td id="cr4"></td></tr>
+                        <tr><td>CR8</td><td id="cr8"></td></tr>
+
+                        <tr class="group"><td colspan="2">デバッグレジスタ</td></tr>
+                        <tr><td>DR0</td><td id="dr0"></td></tr>
+                        <tr><td>DR1</td><td id="dr1"></td></tr>
+                        <tr><td>DR2</td><td id="dr2"></td></tr>
+                        <tr><td>DR3</td><td id="dr3"></td></tr>
+                        <tr><td>DR6</td><td id="dr6"></td></tr>
+                        <tr><td>DR7</td><td id="dr7"></td></tr>
+
+                        <tr class="group"><td colspan="2">x87 / MMX / SIMD レジスタ</td></tr>
+                        <tr><td>ST0</td><td id="st0"></td></tr>
+                        <tr><td>ST1</td><td id="st1"></td></tr>
+                        <tr><td>ST2</td><td id="st2"></td></tr>
+                        <tr><td>ST3</td><td id="st3"></td></tr>
+                        <tr><td>ST4</td><td id="st4"></td></tr>
+                        <tr><td>ST5</td><td id="st5"></td></tr>
+                        <tr><td>ST6</td><td id="st6"></td></tr>
+                        <tr><td>ST7</td><td id="st7"></td></tr>
+                        <tr><td>MM0</td><td id="mm0"></td></tr>
+                        <tr><td>MM1</td><td id="mm1"></td></tr>
+                        <tr><td>MM2</td><td id="mm2"></td></tr>
+                        <tr><td>MM3</td><td id="mm3"></td></tr>
+                        <tr><td>MM4</td><td id="mm4"></td></tr>
+                        <tr><td>MM5</td><td id="mm5"></td></tr>
+                        <tr><td>MM6</td><td id="mm6"></td></tr>
+                        <tr><td>MM7</td><td id="mm7"></td></tr>
+
+                        <tr class="group"><td colspan="2">XMM / YMM (SIMD)</td></tr>
+                        
+                        <!-- XMM0 - XMM15 -->
+                        <tr><td>XMM0</td><td id="xmm0"></td></tr>
+                        <tr><td>XMM1</td><td id="xmm1"></td></tr>
+                        <tr><td>XMM2</td><td id="xmm2"></td></tr>
+                        <tr><td>XMM3</td><td id="xmm3"></td></tr>
+                        <tr><td>XMM4</td><td id="xmm4"></td></tr>
+                        <tr><td>XMM5</td><td id="xmm5"></td></tr>
+                        <tr><td>XMM6</td><td id="xmm6"></td></tr>
+                        <tr><td>XMM7</td><td id="xmm7"></td></tr>
+                        <tr><td>XMM8</td><td id="xmm8"></td></tr>
+                        <tr><td>XMM9</td><td id="xmm9"></td></tr>
+                        <tr><td>XMM10</td><td id="xmm10"></td></tr>
+                        <tr><td>XMM11</td><td id="xmm11"></td></tr>
+                        <tr><td>XMM12</td><td id="xmm12"></td></tr>
+                        <tr><td>XMM13</td><td id="xmm13"></td></tr>
+                        <tr><td>XMM14</td><td id="xmm14"></td></tr>
+                        <tr><td>XMM15</td><td id="xmm15"></td></tr>
+
+                        <!-- YMM0 - YMM15 (AVX) -->
+                        <tr><td>YMM0</td><td id="ymm0"></td></tr>
+                        <tr><td>YMM1</td><td id="ymm1"></td></tr>
+                        <tr><td>YMM2</td><td id="ymm2"></td></tr>
+                        <tr><td>YMM3</td><td id="ymm3"></td></tr>
+                        <tr><td>YMM4</td><td id="ymm4"></td></tr>
+                        <tr><td>YMM5</td><td id="ymm5"></td></tr>
+                        <tr><td>YMM6</td><td id="ymm6"></td></tr>
+                        <tr><td>YMM7</td><td id="ymm7"></td></tr>
+                        <tr><td>YMM8</td><td id="ymm8"></td></tr>
+                        <tr><td>YMM9</td><td id="ymm9"></td></tr>
+                        <tr><td>YMM10</td><td id="ymm10"></td></tr>
+                        <tr><td>YMM11</td><td id="ymm11"></td></tr>
+                        <tr><td>YMM12</td><td id="ymm12"></td></tr>
+                        <tr><td>YMM13</td><td id="ymm13"></td></tr>
+                        <tr><td>YMM14</td><td id="ymm14"></td></tr>
+                        <tr><td>YMM15</td><td id="ymm15"></td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="64bit_int.js"></script>
     </body>
 </html>
